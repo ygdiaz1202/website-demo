@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PoolPro Finance | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 border-r border-primary/10 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="flex items-center justify-center">
+                    <img src="./epicpools-icon.png" alt="EpicPools" class="h-8 w-auto" />
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./dashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./customers-administration.html">
+                    <span class="material-symbols-outlined">group</span>
+                    Customers
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./projects-dashboard.html">
+                    <span class="material-symbols-outlined">construction</span>
+                    Projects
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg font-semibold"
+                    href="./financial-overview.html">
+                    <span class="material-symbols-outlined">payments</span>
+                    Financials
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./media-library.html">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    Media Assets
+                </a>
+            </nav>
+            <div class="p-4 border-t border-primary/10">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                    <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                        <img alt="Admin Profile" class="w-full h-full object-cover"
+                            data-alt="Professional male contractor avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SWXmE0-SefFjb-No4HZ0FOVZ4Dj0iwW6_rMiCShJD_UKV_ga0x6uzzCVOGq1K1c3OBw1HFGeDy2mVDH_Cq6_kvuFCw1FOsbGIzAY6oNquQ4a2IZhCoI8qGSBnxJrBYe9BFQGuW5_BD5D1-G13HfKEmDZjd0L7AkwGiCJehQPlWsWZQf0Fa2wkQULhs0RbsCPzDcf_L5e98yuIjEECXOaow8kKrmpCGiYLTNpPNsoFpm6xjKBRDW6L2a1O_vh1WMXk-OQm5Fys7w5" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate">Leandro Fuentes</p>
+                        <p class="text-xs text-slate-500 truncate">Project Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col min-w-0">
+            <!-- Top Header -->
+            <header
+                class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-10 px-6 flex items-center justify-between">
+                <div class="flex-1 max-w-xl">
+                    <div class="relative group">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-sm"
+                            placeholder="Search invoices, clients or projects..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="size-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+                    </button>
+                    <button
+                        class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-primary/90 transition-colors">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        New Invoice
+                    </button>
+                </div>
+            </header>
+            <div class="p-6 lg:p-10 space-y-8">
+                <!-- Page Title -->
+                <div>
+                    <h1 class="text-3xl font-black tracking-tight mb-1">Financial Overview</h1>
+                    <p class="text-slate-500">Real-time revenue and expense tracking for Rivera Pool &amp; Spa.</p>
+                </div>
+                <!-- Metrics Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-2 rounded-lg bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined">account_balance_wallet</span>
+                            </span>
+                            <span class="text-emerald-500 text-sm font-bold flex items-center">+12%</span>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium mb-1">Total Receivables</p>
+                        <h3 class="text-2xl font-bold tracking-tight">$42,500.00</h3>
+                    </div>
+                    <div
+                        class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-2 rounded-lg bg-blue-100 text-blue-600">
+                                <span class="material-symbols-outlined">payments</span>
+                            </span>
+                            <span class="text-emerald-500 text-sm font-bold flex items-center">+5.2%</span>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium mb-1">Monthly Revenue</p>
+                        <h3 class="text-2xl font-bold tracking-tight">$18,200.00</h3>
+                    </div>
+                    <div
+                        class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-2 rounded-lg bg-orange-100 text-orange-600">
+                                <span class="material-symbols-outlined">trending_down</span>
+                            </span>
+                            <span class="text-red-500 text-sm font-bold flex items-center">-2.4%</span>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium mb-1">Total Expenses</p>
+                        <h3 class="text-2xl font-bold tracking-tight">$8,800.00</h3>
+                    </div>
+                    <div
+                        class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="p-2 rounded-lg bg-emerald-100 text-emerald-600">
+                                <span class="material-symbols-outlined">monetization_on</span>
+                            </span>
+                            <span class="text-emerald-500 text-sm font-bold flex items-center">+8.4%</span>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium mb-1">Net Profit</p>
+                        <h3 class="text-2xl font-bold tracking-tight">$9,400.00</h3>
+                    </div>
+                </div>
+                <!-- Chart and Recent Invoices -->
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                    <!-- Revenue Chart Section -->
+                    <div
+                        class="xl:col-span-2 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                        <div class="flex items-center justify-between mb-8">
+                            <div>
+                                <h3 class="text-lg font-bold">Revenue vs. Expenses</h3>
+                                <p class="text-sm text-slate-500">Last 6 Months Performance</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="size-3 rounded-full bg-primary"></span>
+                                    <span class="text-xs font-medium text-slate-500">Revenue</span>
+                                </div>
+                                <div class="flex items-center gap-1.5 ml-4">
+                                    <span class="size-3 rounded-full bg-slate-300 dark:bg-slate-700"></span>
+                                    <span class="text-xs font-medium text-slate-500">Expenses</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 flex items-end justify-between gap-4 px-2">
+                            <!-- Jan -->
+                            <div class="flex-1 flex flex-col items-center gap-2 group">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 40%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 70%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">Jan</span>
+                            </div>
+                            <!-- Feb -->
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 45%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 65%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">Feb</span>
+                            </div>
+                            <!-- Mar -->
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 30%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 40%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">Mar</span>
+                            </div>
+                            <!-- Apr -->
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 50%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 75%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">Apr</span>
+                            </div>
+                            <!-- May -->
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 35%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 85%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">May</span>
+                            </div>
+                            <!-- Jun -->
+                            <div class="flex-1 flex flex-col items-center gap-2">
+                                <div class="w-full flex items-end justify-center gap-1 h-full">
+                                    <div class="w-full max-w-[12px] bg-slate-200 dark:bg-slate-800 rounded-t-sm"
+                                        style="height: 40%"></div>
+                                    <div class="w-full max-w-[12px] bg-primary rounded-t-sm" style="height: 60%"></div>
+                                </div>
+                                <span class="text-xs font-bold text-slate-400">Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Payment Overview Summary -->
+                    <div
+                        class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                        <h3 class="text-lg font-bold mb-6">Payment Distribution</h3>
+                        <div class="space-y-6">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between text-sm font-medium">
+                                    <span class="text-slate-500">Paid Invoices</span>
+                                    <span>72%</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 72%"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between text-sm font-medium">
+                                    <span class="text-slate-500">Pending</span>
+                                    <span>18%</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 18%"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between text-sm font-medium">
+                                    <span class="text-slate-500">Overdue</span>
+                                    <span>10%</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-red-500 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50">
+                            <p class="text-xs text-slate-500 mb-2 uppercase tracking-widest font-bold">Quick Action</p>
+                            <button
+                                class="w-full py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-50 transition-colors">
+                                Send Reminders (3)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recent Invoices Table -->
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <h3 class="text-lg font-bold">Recent Invoices</h3>
+                        <button class="text-primary text-sm font-bold hover:underline">View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-50 dark:bg-slate-800/50">
+                                <tr>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Client</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Invoice ID</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Date
+                                    </th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Amount</th>
+                                    <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                        Status</th>
+                                    <th class="px-6 py-4"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-xs text-primary">
+                                                JS</div>
+                                            <span class="font-medium">John Schmidt</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">#INV-2024-001</td>
+                                    <td class="px-6 py-4 text-sm">Oct 12, 2023</td>
+                                    <td class="px-6 py-4 font-bold">$1,250.00</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-[10px] font-black uppercase rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Paid</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_horiz</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-xs text-primary">
+                                                LH</div>
+                                            <span class="font-medium">Linda Harrison</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">#INV-2024-002</td>
+                                    <td class="px-6 py-4 text-sm">Oct 14, 2023</td>
+                                    <td class="px-6 py-4 font-bold">$4,800.00</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-[10px] font-black uppercase rounded bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_horiz</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-xs text-primary">
+                                                MR</div>
+                                            <span class="font-medium">Mark Thompson</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">#INV-2024-003</td>
+                                    <td class="px-6 py-4 text-sm">Oct 08, 2023</td>
+                                    <td class="px-6 py-4 font-bold">$2,100.00</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-[10px] font-black uppercase rounded bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">Overdue</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_horiz</button>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-bold text-xs text-primary">
+                                                AW</div>
+                                            <span class="font-medium">Anna White</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">#INV-2024-004</td>
+                                    <td class="px-6 py-4 text-sm">Oct 15, 2023</td>
+                                    <td class="px-6 py-4 font-bold">$850.00</td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2 py-1 text-[10px] font-black uppercase rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Paid</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">more_horiz</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

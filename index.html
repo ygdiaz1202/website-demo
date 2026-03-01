@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>EpicPools | Luxury Custom Pool Construction</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1183d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+  <!-- Navigation -->
+  <header
+    class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="./epicpools-icon.png" alt="EpicPools" class="h-12 w-auto" />
+      </div>
+      <nav class="hidden md:flex items-center gap-10">
+        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
+        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#reviews">Reviews</a>
+        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4"><a href="./login.html"
+          class="hidden sm:block text-slate-600 dark:text-slate-300 hover:text-primary font-bold text-sm transition-colors px-4 py-2">Sign
+          In</a>
+        <button
+          class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20">
+          Get a Quote
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center px-6">
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/40 to-background-dark/80 z-10">
+        </div>
+        <img alt="Luxury Pool" class="w-full h-full object-cover"
+          data-alt="Luxury infinity pool at sunset overlooking the ocean"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD37suOkJdUKgRiJ94DczpAJLXikEqUaLcR0GFgd8urmFmV5NIYeBVy81eu0E4GeoO1WI-KoyUH7_tgDIp5k9v80KWR2zsixzjikL1u2I-00LCjobLET4xnxEn8lVeHGOzIpbdAB7elwkSumOvuvb422jltrYJq7MT22iB_wHqH8yUSv35XRKhgd8KYU_6j7pgf4LuswY8kfMZ3k90g_hAfjuK21AfDkalyX2nvdORhR_aSNmYX_BvFS0ecWU8A0O7qalVbDQ0hPbT0" />
+      </div>
+      <div class="relative z-20 max-w-4xl text-center">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold tracking-widest uppercase mb-6">
+          Premier Pool Architects
+        </span>
+        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-8">
+          Crafting Your Ultimate <span class="text-primary">Backyard Oasis</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Experience the pinnacle of luxury with custom-designed pools that blend architectural excellence with serene
+          functionality.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button
+            class="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105">
+            Start Your Project
+          </button>
+          <button
+            class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-xl font-bold text-lg transition-all">
+            View Gallery
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="py-12 bg-white dark:bg-slate-900 border-y border-primary/5">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-black text-primary mb-1">15+</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400">Years Experience</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-primary mb-1">450+</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400">Pools Built</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-primary mb-1">24</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400">Design Awards</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-primary mb-1">100%</div>
+          <div class="text-sm font-medium text-slate-500 dark:text-slate-400">Satisfaction</div>
+        </div>
+      </div>
+    </section>
+    <!-- Project Gallery -->
+    <section class="py-24 px-6 max-w-7xl mx-auto" id="portfolio">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-xl">
+          <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-3">Masterpieces</h2>
+          <h3 class="text-4xl font-black text-slate-900 dark:text-white">Our Luxury Portfolio</h3>
+        </div>
+        <p class="text-slate-600 dark:text-slate-400 max-w-md">
+          Explore our collection of bespoke aquatic installations, from minimalist geometric designs to natural tropical
+          lagoons.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Portfolio Item 1 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:shadow-xl">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img alt="Modern Infinity"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Modern infinity pool with glass edges and limestone decking"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGJY0M8KH9PZs3KYo7DQLg-JcCJBA7mIzhxmr4Kj1FWVouuvRDuMDtTMfg28zF7IDT4n2fqJu4H3XvcXlscfyN1GQdqQf2-xMwh20uqB9kf3XdzLtkbz8XAw1nS9wY2MZI1xU3yucSHyJkBG3xJ75vpUWeVJOFrRw_rWmquiiHJIsq8VsAsIi1ksU60yz161g4KKTtyUEhollV0MMzANxYgdT1WPY_2o2CstfVyZlPKNLiCJkbnm83bFUWoyStPkENmOZOapXTSs3A" />
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2">The Modern Infinity</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Glass-edge pool with integrated smart-spa and LED
+              underwater architecture.</p>
+            <span class="text-primary font-bold text-xs uppercase tracking-tighter inline-flex items-center gap-1">
+              View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </span>
+          </div>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:shadow-xl">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img alt="Geometric Serenity"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Minimalist geometric pool with dark tile and lush landscaping"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8pSGnCHWneeOHCipGLhvxhI3M2sObcz5HxEmCWCtbvNAYa7jSisJB9sYJly9XuvaWnAzxcSc8kASsJ53LrJpEoiYd5iRuPlb1KF4c2N8th6ZCDB_r3iqdKWaPj3ezJPhkxm1rjg7YT5efHXVb97M2kgSbZhf1os7dvpetkFytsUN1ip7Rz1yaRPUJnLuNs25uevqYdWzwycw-47uSoCdvXcHtwqIMBW3AMZp2KkB0mRpI1L3xqFOYw7o2Uf4QVfpM4DHjWaq_41Vf" />
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2">Geometric Serenity</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Sleek minimalist design featuring black volcanic
+              tile and limestone surrounds.</p>
+            <span class="text-primary font-bold text-xs uppercase tracking-tighter inline-flex items-center gap-1">
+              View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </span>
+          </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition-all hover:shadow-xl">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img alt="Tropical Lagoon"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Tropical lagoon style pool with waterfall and natural stone"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrcI7whfNszOVkOjZNKLhFxM6wNmBORib7EMV6shO1_H1wcUDxYpl5IodeSHltri9DZBLs4oEtYb4HvXRWJudbkaClXNqg5S8w6RBhdNQ8ybCc1uQM0pfdTHG14b1Pp7FHcQNFVOr_z79MevVtLFy2IzvKXy8tVDPK40ugkySFj2BxrDDpV5ikmSjD_loON9QKaD_85LHjMs-pLtuAcywmBCSjUDG62_iQDzUgJTeJNqMd99YqKS2FyjgId-wA-u96UursurtPQ6vX" />
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2">Tropical Lagoon</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Natural rock waterfall features with lush
+              landscaping and saltwater purification.</p>
+            <span class="text-primary font-bold text-xs uppercase tracking-tighter inline-flex items-center gap-1">
+              View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Reviews Section -->
+    <section class="py-24 bg-primary/5" id="reviews">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-3">Testimonials</h2>
+          <h3 class="text-4xl font-black text-slate-900 dark:text-white">What Our Clients Say</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+            <div class="flex text-amber-400 mb-4">
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 italic mb-6">"EpicPools turned our backyard into a 5-star
+              resort. Their attention to detail during the construction phase was beyond impressive."</p>
+            <div class="flex items-center gap-4">
+              <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">JD
+              </div>
+              <div>
+                <h5 class="font-bold">Jonathan Davis</h5>
+                <p class="text-xs text-slate-500">"EpicPools turned our backyard into a 5-star resort. Their attention
+                  to detail during the construction phase was beyond impressive."</p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+            <div class="flex text-amber-400 mb-4">
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 italic mb-6">
+              "The design team really listened to our needs. The integration of the smart pool technology makes
+              maintenance so effortless."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">MS
+              </div>
+              <div>
+                <h5 class="font-bold">Maria Sanchez</h5>
+                <p class="text-xs text-slate-500">Miami, FL</p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div
+            class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+            <div class="flex text-amber-400 mb-4">
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+              <span class="material-symbols-outlined fill-1">star</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 italic mb-6">
+              "Professional from start to finish. They completed the project on time and within the budget. Highly
+              recommend for luxury projects."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">RT
+              </div>
+              <div>
+                <h5 class="font-bold">Robert Thompson</h5>
+                <p class="text-xs text-slate-500">Austin, TX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto" id="contact">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-3">Get In Touch</h2>
+          <h3 class="text-4xl font-black text-slate-900 dark:text-white mb-6">Ready to Build Your Dream?</h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-10 text-lg">
+            Schedule a consultation with our design experts today. We'll walk through your vision and provide a
+            comprehensive proposal.
+          </p>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <h5 class="font-bold">Our Headquarters</h5>
+                <p class="text-slate-500">123 Aqua Lane, Suite 400<br />Malibu, CA 90265</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <div>
+                <h5 class="font-bold">Call Us Directly</h5>
+                <p class="text-slate-500">+1 (800) 555-POOL</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <h5 class="font-bold">Email Our Team</h5>
+                <p class="text-slate-500">design@poolpro.luxury</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800">
+          <form class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Full Name</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="John Doe" type="text" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Email Address</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="john@example.com" type="email" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Project Type</label>
+              <select
+                class="w-full px-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                <option>Infinity Edge Pool</option>
+                <option>Natural Lagoon</option>
+                <option>Geometric/Modern</option>
+                <option>Renovation</option>
+                <option>Commercial Project</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2">Project Vision</label>
+              <textarea
+                class="w-full px-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                placeholder="Tell us about your dream backyard..." rows="4"></textarea>
+            </div>
+            <button
+              class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all flex items-center justify-center gap-2"
+              type="submit">
+              Send Request <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="bg-primary p-1.5 rounded-lg text-white">
+              <span class="material-symbols-outlined block">pool</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tight uppercase">Epic<span class="text-primary">Pools</span></h2>
+          </div>
+          <p class="text-slate-400 max-w-sm mb-6">
+            Defining luxury one drop at a time. We design and build award-winning aquatic environments for those who
+            demand the finest quality and architectural precision.
+          </p>
+          <div class="flex gap-4">
+            <a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </a>
+            <a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-xl">camera</span>
+            </a>
+            <a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+          <ul class="space-y-4 text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Our Portfolio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">The Design Process</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Smart Technology</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Safety Standards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-6">Support</h4>
+          <ul class="space-y-4 text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Maintenance Services</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Customer Portal</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Warranty Info</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <p>© 2024 EpicPools International. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+          <a class="hover:text-white transition-colors" href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

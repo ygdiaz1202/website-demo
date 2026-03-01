@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PoolPro Assets - Media Library</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 border-r border-primary/10 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="flex items-center justify-center">
+                    <img src="./epicpools-icon.png" alt="EpicPools" class="h-8 w-auto" />
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./dashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./customers-administration.html">
+                    <span class="material-symbols-outlined">group</span>
+                    Customers
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./projects-dashboard.html">
+                    <span class="material-symbols-outlined">construction</span>
+                    Projects
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./financial-overview.html">
+                    <span class="material-symbols-outlined">payments</span>
+                    Financials
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg font-semibold"
+                    href="./media-library.html">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    Media Assets
+                </a>
+            </nav>
+            <div class="p-4 border-t border-primary/10">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                    <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                        <img alt="Admin Profile" class="w-full h-full object-cover"
+                            data-alt="Professional male contractor avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SWXmE0-SefFjb-No4HZ0FOVZ4Dj0iwW6_rMiCShJD_UKV_ga0x6uzzCVOGq1K1c3OBw1HFGeDy2mVDH_Cq6_kvuFCw1FOsbGIzAY6oNquQ4a2IZhCoI8qGSBnxJrBYe9BFQGuW5_BD5D1-G13HfKEmDZjd0L7AkwGiCJehQPlWsWZQf0Fa2wkQULhs0RbsCPzDcf_L5e98yuIjEECXOaow8kKrmpCGiYLTNpPNsoFpm6xjKBRDW6L2a1O_vh1WMXk-OQm5Fys7w5" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate">Leandro Fuentes</p>
+                        <p class="text-xs text-slate-500 truncate">Project Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col min-w-0">
+            <!-- Top Navigation -->
+            <header
+                class="h-16 border-b border-primary/10 bg-white dark:bg-slate-900 px-8 flex items-center justify-between sticky top-0 z-10">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="max-w-md w-full relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary"
+                            placeholder="Global search..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
+                    </button>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="p-6 lg:p-10 space-y-8">
+                <!-- Page Header & Action Bar -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                        <h1 class="text-3xl font-bold tracking-tight">Media Library</h1>
+                        <p class="text-slate-500 dark:text-slate-400 mt-1">Manage all construction photos and videos</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="flex items-center gap-2 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+                            <span class="material-symbols-outlined">cloud_upload</span>
+                            Bulk Upload
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                            <span class="material-symbols-outlined">download</span>
+                            Export All
+                        </button>
+                    </div>
+                </div>
+                <!-- Upload Zone -->
+                <div
+                    class="bg-primary/5 border-2 border-dashed border-primary/30 rounded-xl p-8 flex flex-col items-center justify-center text-center">
+                    <div class="bg-primary/10 p-4 rounded-full mb-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">add_photo_alternate</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Upload Media Assets</h3>
+                    <p class="text-slate-500 max-w-sm mx-auto mt-2">Drag and drop high-res project photos or videos
+                        here.
+                        Tag them automatically by project name.</p>
+                    <div class="mt-4 flex gap-4">
+                        <select
+                            class="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm px-4 py-2 focus:ring-primary">
+                            <option>Select Project...</option>
+                            <option>Ocean View Estates - #204</option>
+                            <option>Sunset Hills Renovation</option>
+                            <option>Mountain Retreat Pool</option>
+                        </select>
+                        <button class="text-primary font-semibold text-sm hover:underline">Browse Files</button>
+                    </div>
+                </div>
+                <!-- Filters -->
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-wrap gap-4 items-center">
+                    <div class="flex-1 min-w-[280px]">
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">filter_list</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary"
+                                placeholder="Filter by project name, address, or contractor..." type="text" />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <select
+                            class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm px-4 py-2.5">
+                            <option>All Types</option>
+                            <option>Photos Only</option>
+                            <option>Videos Only</option>
+                            <option>Time-lapses</option>
+                        </select>
+                        <select
+                            class="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm px-4 py-2.5">
+                            <option>Most Recent</option>
+                            <option>Oldest First</option>
+                            <option>Project A-Z</option>
+                        </select>
+                        <div class="h-8 w-px bg-slate-200 dark:border-slate-700 mx-1"></div>
+                        <div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+                            <button class="p-1.5 rounded bg-white dark:bg-slate-700 shadow-sm text-primary">
+                                <span class="material-symbols-outlined block">grid_view</span>
+                            </button>
+                            <button class="p-1.5 rounded text-slate-400 hover:text-slate-600">
+                                <span class="material-symbols-outlined block">format_list_bulleted</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Asset Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Asset Card 1 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Crystal clear blue luxury swimming pool with modern architecture"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaONSVK8RWj-5maC5CM8qEptPo2mlZBRfDP7VOMC-tsyubMiwK0nMbpS1R10byikjI1Yl86MXO1HzxS9OWOZsebqGaEZY6nV4_Z9-FXHiSOUGMNepkbICo3nodWVBc9T0BA4NhL0i8SqjvOFhnkCmoCwdOSuxZM8pnSEOp_MuQFM-Evrotee-ZSE-nNWccE0ZJWbicjHl3Q6KMhBYEVZiV_cf3fz4Aw9gnmZK9T5Oor9FV7r1DDtxboOonLlAz3Z-6uc9x4Ln9rk5i" />
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-black/50 text-white px-2 py-1 rounded text-[10px] font-bold uppercase backdrop-blur-sm">Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Sunset Hills - Deck Installation</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 24, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#finishing</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#decking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 2 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Aerial view of a swimming pool construction site with excavation equipment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy7MDTdBf2B8ThaLifduqpj0v57abc94Y9LvkzBIo3uvgw8JDXWSKQgi9BszuCLffIqQFWSeOSI-HHwc3WXBe-YpQL_Y90KwveOJ_eRmD-Ajxft2Qscyf7TDoPMtqJNbt_popu9YrRng7zjcvVaxliMEGWnPbKdz_w5glZIXkxmwuhqmQZ-9l-u36oQw-IPyVLghL-tt4OSG-dggNIGgziTLLJYUc3_qtXFtEYh1zpbaEQCenhP2TZAnSMKXo5qPa2KfGiptYFSR6n" />
+                            <div
+                                class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+                            </div>
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-primary text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Video</span>
+                            </div>
+                            <div class="absolute bottom-2 right-2">
+                                <span
+                                    class="bg-black/60 text-white px-1.5 py-0.5 rounded text-[10px] font-medium backdrop-blur-md">0:45</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Mountain Retreat - Excavation Phase</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 22, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#excavation</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#digging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 3 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Worker applying plaster to a pool wall"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtK1hHItmIO8FQuWUu25npuslUekTfBeG8AMs5sIsBlE8uD_iWKjmQCX1hGm50f85tbR6Czlxu9ihc0jaaiZc2x1zfGMRZ7aAnGKF_hnwqPPGQU0VV8o2dVNcD9w-v-l3a8918wnjIqOS3FDAtVYEl050GakkKOqdJyadZRz6PnxpbfejrcHMPd7LH-caw2vYL6f7C62D8VzmBVTnJQUluSHEjROn0ZPUhB0cIHrZnJCVYw7S3tNk9E5VASWQkrkVidODp-h_w031q" />
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-black/50 text-white px-2 py-1 rounded text-[10px] font-bold uppercase backdrop-blur-sm">Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Lakeside Estates - Plaster Coat</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 19, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#plastering</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#interior</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 4 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Modern geometric swimming pool at night with ambient lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqpY9LdAKDPJQC6VWbTkikfHzm5EIbzGjGp6zdprrxy0ioo8CsyZtMYPxPyozxL4wpl66W2IixxAIjB6x7FqV6PzgfYRAONxPHCR7TYJFpwYivPxJNevC1KzEGesE9gIxtP_zz7yFmVHt-wZrQCUfnwUKmsGmUBwxGZBarEBumMaySb00gpBvO4Lwr4KdGapklPyJ4Xa1gq_fj1cF4-QVsdbMqFlf1tht6D-bvnEtTnzl_PLE2Kjea0R76B4BxIgYENWGSsAKEuvLH" />
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-black/50 text-white px-2 py-1 rounded text-[10px] font-bold uppercase backdrop-blur-sm">Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">The Hamptons - Lighting Test</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 18, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#lighting</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#completed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 5 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Detailed shot of pool tiles and waterfall feature"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAkPhD3jboVm6bzaUMPyxzqXKaSqhiOkebsk--KfkWi8FV-XV2GEGUhExgZkJqFkQnLisgAm-K1g2ucPDvP7I-DGO4Y5UB0VuCZfVAM0G8mlEGFeeDadNahVGZk_6gfO7ucnczntCUcgxydANYnzFkJUqjdvGr-xcMBgtpaQTEWqZPmpZ86TZWjzm3kaXcIxV3bMs1C61GRM0Qs3nZCq_G6sZFJ_7oIcq38gtPK3Ao5TDRqJKl3knBwPP6OOx_uymv_FlKf9cmwhHd" />
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-black/50 text-white px-2 py-1 rounded text-[10px] font-bold uppercase backdrop-blur-sm">Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Palm Grove - Tile Work Detailed</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 15, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#tiling</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#waterfall</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 6 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Workers installing concrete pool deck"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2DudThVmqyp5JGBM8vxsPzaMHlrJ3blseUikXbnEym7keb6jHsbexm8I-EkmTj-SesQZw_pUMvmbZMeC1IpkxbKyeLeb9RdecHomTbCFaBpdhF1UrxajkFdu2TQNoViqUvxFuGauL0HHeKtwXf9WZVVI1LCjaqDD_BhEJmG2hiTy5reZpv8VwESyZpPsDOH0tZJb8lrQavDLXec4UL5SkdlIwB3hwTtrkGvu7bmXPGyRjc4QfavfLFIbaBzocpotJoBKd80G9jYxm" />
+                            <div
+                                class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+                            </div>
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-primary text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Video</span>
+                            </div>
+                            <div class="absolute bottom-2 right-2">
+                                <span
+                                    class="bg-black/60 text-white px-1.5 py-0.5 rounded text-[10px] font-medium backdrop-blur-md">2:15</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Harbor View - Concrete Pour</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 12, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#concrete</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#foundation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 7 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Blue ceramic pool tiles being laid"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfG-ii_6QEg1Gx3cc55c0RmCiP3bT4uowFyY_RJEFrb_DG80d8y7x0UzdYdG4Z-1fvGzc6Kwq3ZLTbloiWaxxLjO2YdAA8x_OwITk9k82IvAv2PYKv02uWDdp1m-uVhF2mdMPm6aEtXFAb9HagjjPzwP5Q-ZZW64f5C6Ym69JlnWPzNUhGt7D7OzWGWlz8bqT4qnbS0rbaPGPZr2sIZnUWy-hd8I8OiijD2rZWA7rf3cE5BAAbFI_5xEBiOuKkfAz9eSOCKWFVR6uF" />
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-black/50 text-white px-2 py-1 rounded text-[10px] font-bold uppercase backdrop-blur-sm">Photo</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Oak Creek - Grouting Phase</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 10, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#tiling</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Asset Card 8 -->
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+                        <div class="relative aspect-video bg-slate-200 dark:bg-slate-800">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                data-alt="Backyard pool renovation with half-filled water"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE97Ev5Ako2ErNsoVDBVwdmqwY7xAYEmrhL-BNDhU20lz38KHZlS5xY90wVo8RWsrkQX5k0mVsupTu4eeTVxF7mmyFqid-YnlyxtVWyUygBArLb1_QxK7Z-my_UD6N4Cd2CP9NqWODllADxCWrle_FkXavd__d2TPJlSuxuqFYWW4fCcNOhWCZK3z4UwQGJNB04R_nbv067IhlUZKRXr-FFQN7av5MX5Wc2F-hSM6_kK8bAGV7kRvtA-IWBfJm1hsrZX51moKv4JsB" />
+                            <div
+                                class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+                            </div>
+                            <div class="absolute top-2 right-2 flex gap-1">
+                                <span
+                                    class="bg-primary text-white px-2 py-1 rounded text-[10px] font-bold uppercase">Video</span>
+                            </div>
+                            <div class="absolute bottom-2 right-2">
+                                <span
+                                    class="bg-black/60 text-white px-1.5 py-0.5 rounded text-[10px] font-medium backdrop-blur-md">1:02</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-sm truncate">Maple Ridge - First Fill</h4>
+                            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                Oct 08, 2023
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mt-3">
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-semibold rounded">#filling</span>
+                                <span
+                                    class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-semibold rounded">#renovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div
+                    class="flex items-center justify-between border-t border-slate-200 dark:border-slate-800 pt-6 mt-4">
+                    <p class="text-sm text-slate-500">Showing 8 of 142 assets</p>
+                    <div class="flex gap-2">
+                        <button
+                            class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-50 disabled:opacity-50"
+                            disabled="">
+                            <span class="material-symbols-outlined block text-lg">chevron_left</span>
+                        </button>
+                        <button class="px-4 py-1 bg-primary text-white rounded font-medium text-sm">1</button>
+                        <button
+                            class="px-4 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-50 font-medium text-sm">2</button>
+                        <button
+                            class="px-4 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-50 font-medium text-sm">3</button>
+                        <button
+                            class="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-50">
+                            <span class="material-symbols-outlined block text-lg">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="mt-auto bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-6 text-center text-slate-500 dark:text-slate-400 text-sm">
+        <p>© 2023 PoolPro Project Media Management System. All rights reserved.</p>
+    </footer>
+    </div>
+</body>
+
+</html>

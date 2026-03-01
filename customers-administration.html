@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>PoolPro Manager - Customer Directory</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 border-r border-primary/10 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="flex items-center justify-center">
+                    <img src="./epicpools-icon.png" alt="EpicPools" class="h-8 w-auto" />
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./dashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg font-semibold"
+                    href="./customers-administration.html">
+                    <span class="material-symbols-outlined">group</span>
+                    Customers
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./projects-dashboard.html">
+                    <span class="material-symbols-outlined">construction</span>
+                    Projects
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./financial-overview.html">
+                    <span class="material-symbols-outlined">payments</span>
+                    Financials
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./media-library.html">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    Media Assets
+                </a>
+            </nav>
+            <div class="p-4 border-t border-primary/10">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                    <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                        <img alt="Admin Profile" class="w-full h-full object-cover"
+                            data-alt="Professional male contractor avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SWXmE0-SefFjb-No4HZ0FOVZ4Dj0iwW6_rMiCShJD_UKV_ga0x6uzzCVOGq1K1c3OBw1HFGeDy2mVDH_Cq6_kvuFCw1FOsbGIzAY6oNquQ4a2IZhCoI8qGSBnxJrBYe9BFQGuW5_BD5D1-G13HfKEmDZjd0L7AkwGiCJehQPlWsWZQf0Fa2wkQULhs0RbsCPzDcf_L5e98yuIjEECXOaow8kKrmpCGiYLTNpPNsoFpm6xjKBRDW6L2a1O_vh1WMXk-OQm5Fys7w5" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate">Leandro Fuentes</p>
+                        <p class="text-xs text-slate-500 truncate">Project Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col min-w-0">
+            <!-- Top Navigation -->
+            <header
+                class="h-16 border-b border-primary/10 bg-white dark:bg-slate-900 px-8 flex items-center justify-between sticky top-0 z-10">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="max-w-md w-full relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary"
+                            placeholder="Search customers..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
+                    </button>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                </div>
+            </header>
+            <main class="p-6 lg:p-10 space-y-8">
+                <!-- Page Title & CTA -->
+                <div class="flex flex-wrap justify-between items-end gap-4 mb-8">
+                    <div class="flex flex-col gap-1">
+                        <h1
+                            class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em]">
+                            Customers</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-base font-normal">Manage your client pipeline
+                            from initial lead to final installation.</p>
+                    </div>
+                    <button
+                        class="flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all">
+                        <span class="material-symbols-outlined text-xl">person_add</span>
+                        <span>Add New Customer</span>
+                    </button>
+                </div>
+                <!-- Stats Overview -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                        <div
+                            class="size-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
+                            <span class="material-symbols-outlined">group</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Total Clients</p>
+                            <p class="text-2xl font-bold">142</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                        <div
+                            class="size-12 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600">
+                            <span class="material-symbols-outlined">design_services</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">In Design</p>
+                            <p class="text-2xl font-bold">28</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                        <div
+                            class="size-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600">
+                            <span class="material-symbols-outlined">construction</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Under Construction
+                            </p>
+                            <p class="text-2xl font-bold">14</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Pipeline Value</p>
+                            <p class="text-2xl font-bold">$1.4M</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filters & Search -->
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                    <div
+                        class="p-4 border-b border-slate-100 dark:border-slate-800 flex flex-col lg:flex-row gap-4 justify-between items-center">
+                        <div class="flex gap-2 w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0">
+                            <button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold">All
+                                Customers</button>
+                            <button
+                                class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-slate-100 transition-colors">Leads</button>
+                            <button
+                                class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-slate-100 transition-colors">Design
+                                Phase</button>
+                            <button
+                                class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-slate-100 transition-colors">Active
+                                Builds</button>
+                            <button
+                                class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium hover:bg-slate-100 transition-colors">Completed</button>
+                        </div>
+                        <div class="relative w-full lg:w-72">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
+                                placeholder="Search customers..." type="text" />
+                        </div>
+                    </div>
+                    <!-- Customer Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
+                                    <th class="px-6 py-4">Customer Name</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4">Project Type</th>
+                                    <th class="px-6 py-4">Last Contact</th>
+                                    <th class="px-6 py-4">Contract Value</th>
+                                    <th class="px-6 py-4 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 text-xs">
+                                                RM</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-sm">Robert Miller</span>
+                                                <span class="text-xs text-slate-500">robert.m@email.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Under
+                                            Construction</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium">In-Ground Concrete</td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">Oct 24, 2023</td>
+                                    <td class="px-6 py-4 text-sm font-bold">$78,500</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 text-xs">
+                                                JS</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-sm">Jane Simmons</span>
+                                                <span class="text-xs text-slate-500">jane.simmons@outlook.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">Design
+                                            Phase</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium">Lap Pool</td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">Yesterday</td>
+                                    <td class="px-6 py-4 text-sm font-bold">$42,000</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 text-xs">
+                                                TH</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-sm">Thomas Hyland</span>
+                                                <span class="text-xs text-slate-500">thyland@corp.net</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">Lead</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium">Infinity Edge</td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">2 days ago</td>
+                                    <td class="px-6 py-4 text-sm font-bold">$115,000</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 text-xs">
+                                                AK</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-sm">Angela Kim</span>
+                                                <span class="text-xs text-slate-500">akim.design@mail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Under
+                                            Construction</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium">Fiberglass Shell</td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">Oct 20, 2023</td>
+                                    <td class="px-6 py-4 text-sm font-bold">$35,200</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 text-xs">
+                                                DW</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-sm">David Wright</span>
+                                                <span class="text-xs text-slate-500">dwright@yahoo.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-400">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium">Spool (Spa/Pool)</td>
+                                    <td class="px-6 py-4 text-sm text-slate-500">Oct 12, 2023</td>
+                                    <td class="px-6 py-4 text-sm font-bold">$28,900</td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button class="text-slate-400 hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div
+                        class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Showing 5 of 142 customers</p>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-3 py-1 rounded border border-slate-200 dark:border-slate-700 text-xs font-semibold disabled:opacity-50"
+                                disabled="">Previous</button>
+                            <button
+                                class="px-3 py-1 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-xs font-semibold hover:bg-slate-50">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer
+                class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-6 text-center text-slate-500 dark:text-slate-400 text-sm mt-auto">
+                <p>© 2023 PoolPro Systems Inc. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

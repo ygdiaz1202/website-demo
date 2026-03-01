@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>PoolPro Admin Dashboard</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 border-r border-primary/10 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+            <div class="p-6 flex items-center gap-3">
+                <div class="flex items-center justify-center">
+                    <img src="./epicpools-icon.png" alt="EpicPools" class="h-8 w-auto" />
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-lg font-semibold"
+                    href="./dashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./customers-administration.html">
+                    <span class="material-symbols-outlined">group</span>
+                    Customers
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./projects-dashboard.html">
+                    <span class="material-symbols-outlined">construction</span>
+                    Projects
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./financial-overview.html">
+                    <span class="material-symbols-outlined">payments</span>
+                    Financials
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="./media-library.html">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    Media Assets
+                </a>
+            </nav>
+            <div class="p-4 border-t border-primary/10">
+                <div class="flex items-center gap-3 p-2 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                    <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+                        <img alt="Admin Profile" class="w-full h-full object-cover"
+                            data-alt="Professional male contractor avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SWXmE0-SefFjb-No4HZ0FOVZ4Dj0iwW6_rMiCShJD_UKV_ga0x6uzzCVOGq1K1c3OBw1HFGeDy2mVDH_Cq6_kvuFCw1FOsbGIzAY6oNquQ4a2IZhCoI8qGSBnxJrBYe9BFQGuW5_BD5D1-G13HfKEmDZjd0L7AkwGiCJehQPlWsWZQf0Fa2wkQULhs0RbsCPzDcf_L5e98yuIjEECXOaow8kKrmpCGiYLTNpPNsoFpm6xjKBRDW6L2a1O_vh1WMXk-OQm5Fys7w5" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate">Leandro Fuentes</p>
+                        <p class="text-xs text-slate-500 truncate">Project Admin</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col min-w-0">
+            <!-- Top Navigation -->
+            <header
+                class="h-16 border-b border-primary/10 bg-white dark:bg-slate-900 px-8 flex items-center justify-between sticky top-0 z-10">
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="max-w-md w-full relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary"
+                            placeholder="Search projects, customers..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
+                    </button>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Dashboard Body -->
+            <div class="p-8 space-y-8 max-w-[1400px] mx-auto w-full">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-slate-500 font-medium">Active Builds</span>
+                            <div
+                                class="size-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined">water_drop</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold">14</div>
+                        <div class="mt-2 text-sm text-green-600 flex items-center gap-1 font-medium">
+                            <span class="material-symbols-outlined text-sm">trending_up</span> +3 this month
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-slate-500 font-medium">Revenue</span>
+                            <div
+                                class="size-10 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold">$184.2k</div>
+                        <div class="mt-2 text-sm text-green-600 flex items-center gap-1 font-medium">
+                            <span class="material-symbols-outlined text-sm">trending_up</span> 12% vs last month
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-slate-500 font-medium">Pending Approvals</span>
+                            <div
+                                class="size-10 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined">assignment_late</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold">7</div>
+                        <div class="mt-2 text-sm text-slate-500 font-medium">Awaiting city permits</div>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/10 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-slate-500 font-medium">Client Satisfaction</span>
+                            <div
+                                class="size-10 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold">4.9/5.0</div>
+                        <div class="mt-2 text-sm text-slate-500 font-medium">From 156 reviews</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                    <!-- Project Detail & Status -->
+                    <div class="xl:col-span-2 space-y-8">
+                        <!-- Current Active Project Focus -->
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden">
+                            <div class="p-6 border-b border-primary/10 flex items-center justify-between">
+                                <div>
+                                    <h2 class="text-xl font-bold">Active Project: Oak Creek Estates #2</h2>
+                                    <p class="text-sm text-slate-500 font-medium">Client: Jonathan &amp; Sarah Miller
+                                    </p>
+                                </div>
+                                <button
+                                    class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-primary/90 transition-colors">
+                                    Update Status
+                                </button>
+                            </div>
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <p class="text-sm font-bold mb-4 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">analytics</span>
+                                        Construction Progress
+                                    </p>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-slate-600 dark:text-slate-400">Excavation</span>
+                                            <span class="font-bold text-green-600">Completed</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full">
+                                            <div class="bg-green-500 h-full rounded-full" style="width: 100%"></div>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-slate-600 dark:text-slate-400">Rebar &amp; Plumbing</span>
+                                            <span class="font-bold text-green-600">Completed</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full">
+                                            <div class="bg-green-500 h-full rounded-full" style="width: 100%"></div>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-slate-600 dark:text-slate-400">Gunite Spray</span>
+                                            <span class="font-bold text-primary">In Progress (85%)</span>
+                                        </div>
+                                        <div
+                                            class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+                                        </div>
+                                        <div class="flex items-center justify-between text-sm">
+                                            <span class="text-slate-600 dark:text-slate-400">Tiling &amp; Coping</span>
+                                            <span class="font-bold text-slate-400">Scheduled (Oct 12)</span>
+                                        </div>
+                                        <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full">
+                                            <div class="bg-primary/20 h-full rounded-full" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Upload Area -->
+                                <div class="flex flex-col h-full">
+                                    <p class="text-sm font-bold mb-4 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">cloud_upload</span>
+                                        Upload Progress Media
+                                    </p>
+                                    <div
+                                        class="flex-1 border-2 border-dashed border-primary/20 rounded-xl bg-primary/5 flex flex-col items-center justify-center p-8 text-center cursor-pointer hover:bg-primary/10 transition-colors">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-primary mb-2">upload_file</span>
+                                        <p class="text-sm font-bold">Drop site photos/videos here</p>
+                                        <p class="text-xs text-slate-500 mt-1">PNG, JPG, MP4 up to 50MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Customer List -->
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden">
+                            <div class="p-6 border-b border-primary/10 flex items-center justify-between">
+                                <h2 class="text-xl font-bold">Recent Customers</h2>
+                                <button class="text-primary text-sm font-bold flex items-center gap-1">View All <span
+                                        class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead>
+                                        <tr
+                                            class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-xs uppercase tracking-wider font-bold">
+                                            <th class="px-6 py-4">Customer</th>
+                                            <th class="px-6 py-4">Project Type</th>
+                                            <th class="px-6 py-4">Status</th>
+                                            <th class="px-6 py-4">Next Step</th>
+                                            <th class="px-6 py-4">Balance</th>
+                                            <th class="px-6 py-4 text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-primary/5">
+                                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div
+                                                        class="size-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-xs">
+                                                        RJ</div>
+                                                    <div class="text-sm font-bold">Robert Jones</div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm">Infinity Edge</td>
+                                            <td class="px-6 py-4">
+                                                <span
+                                                    class="px-2 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded text-xs font-bold uppercase">Active</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-slate-500 font-medium">Electrical Rough-in
+                                            </td>
+                                            <td class="px-6 py-4 text-sm font-bold">$12,400</td>
+                                            <td class="px-6 py-4 text-right">
+                                                <button class="p-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">
+                                                    <span
+                                                        class="material-symbols-outlined text-slate-400">more_vert</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div
+                                                        class="size-8 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-600 text-xs">
+                                                        AS</div>
+                                                    <div class="text-sm font-bold">Alice Smith</div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm">Plunge Pool</td>
+                                            <td class="px-6 py-4">
+                                                <span
+                                                    class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 rounded text-xs font-bold uppercase">Permit</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-slate-500 font-medium">Zoning Approval
+                                            </td>
+                                            <td class="px-6 py-4 text-sm font-bold">$4,500</td>
+                                            <td class="px-6 py-4 text-right">
+                                                <button class="p-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">
+                                                    <span
+                                                        class="material-symbols-outlined text-slate-400">more_vert</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-3">
+                                                    <div
+                                                        class="size-8 rounded-full bg-orange-100 flex items-center justify-center font-bold text-orange-600 text-xs">
+                                                        MH</div>
+                                                    <div class="text-sm font-bold">Mark Hudson</div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm">Standard Lap</td>
+                                            <td class="px-6 py-4">
+                                                <span
+                                                    class="px-2 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 rounded text-xs font-bold uppercase">Quoting</span>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-slate-500 font-medium">Site Measurement
+                                            </td>
+                                            <td class="px-6 py-4 text-sm font-bold">$0</td>
+                                            <td class="px-6 py-4 text-right">
+                                                <button class="p-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">
+                                                    <span
+                                                        class="material-symbols-outlined text-slate-400">more_vert</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar Activity/Financials -->
+                    <div class="space-y-8">
+                        <!-- Recent Activity Feed -->
+                        <div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm p-6">
+                            <h2 class="text-lg font-bold mb-6">Recent Activity</h2>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="size-2 mt-2 bg-primary rounded-full ring-4 ring-primary/20 shrink-0">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Gunite Completed</p>
+                                        <p class="text-xs text-slate-500 mb-1">Oak Creek Estates #2</p>
+                                        <p class="text-[10px] text-slate-400 font-medium">2 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="size-2 mt-2 bg-green-500 rounded-full ring-4 ring-green-500/20 shrink-0">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Payment Received</p>
+                                        <p class="text-xs text-slate-500 mb-1">$15,000 Milestone 2 - Jones Residence</p>
+                                        <p class="text-[10px] text-slate-400 font-medium">5 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="size-2 mt-2 bg-amber-500 rounded-full ring-4 ring-amber-500/20 shrink-0">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Inspection Scheduled</p>
+                                        <p class="text-xs text-slate-500 mb-1">City inspection for Miller project</p>
+                                        <p class="text-[10px] text-slate-400 font-medium">Yesterday</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="size-2 mt-2 bg-blue-500 rounded-full ring-4 ring-blue-500/20 shrink-0">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">New Photo Uploaded</p>
+                                        <p class="text-xs text-slate-500 mb-1">Subcontractor uploaded "Rebar_Final.jpg"
+                                        </p>
+                                        <p class="text-[10px] text-slate-400 font-medium">Oct 10, 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full mt-8 py-2 border border-primary/20 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                                View Audit Log
+                            </button>
+                        </div>
+                        <!-- Financial Summary Mini -->
+                        <div
+                            class="bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20 p-6 relative overflow-hidden">
+                            <div class="relative z-10">
+                                <h2 class="text-lg font-bold mb-4">Cash Flow Overview</h2>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1">
+                                            <span class="text-slate-600 dark:text-slate-400 uppercase">Total
+                                                Receivables</span>
+                                            <span>$342,000</span>
+                                        </div>
+                                        <div
+                                            class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-primary h-full" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-bold mb-1">
+                                            <span class="text-slate-600 dark:text-slate-400 uppercase">Vendor
+                                                Payables</span>
+                                            <span>$128,500</span>
+                                        </div>
+                                        <div
+                                            class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-red-400 h-full" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-4 mt-4 border-t border-primary/10">
+                                        <div class="flex justify-between items-end">
+                                            <p class="text-xs text-slate-500 font-medium uppercase">Net Margin</p>
+                                            <p class="text-2xl font-black text-primary">$213,500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Abstract Design Background element -->
+                            <div class="absolute -bottom-4 -right-4 size-32 bg-primary/10 rounded-full blur-2xl"></div>
+                        </div>
+                        <!-- Quick Map View (Location context) -->
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-xl border border-primary/10 shadow-sm overflow-hidden h-48 relative">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Map view showing active project site locations" data-location="Los Angeles"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3uL6931tpqDHbBqLeK0Pp7xHY87uzWW6mASpz4JliyJrsNCqKmlpbUtsjn6GsC0mk47aeUVo1HCSLLTFdfBf68NY0POODUls_wgZ2v8SG0OGVlq3uY7p3uO0lCcwwNV5728PxhTONqjqY3voDAZCb3DjAoQUYK3KvlhDLsfiUtehndOlibj4qzfVsfmlxmYP4gdef5u4MPy5zGvSmAM4AcfuNJR4CQmfJWnRCxO2XpJgpdzmnBNpH7gw3eKmSdzuFsKd3fXc9Awyf" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                                <div class="text-white">
+                                    <p class="text-xs font-bold uppercase tracking-widest opacity-80">Site View</p>
+                                    <p class="text-sm font-bold">Active Sites in Greater Area</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

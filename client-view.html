@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PoolProject Tracker - Client Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1183d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 py-4 lg:px-20 sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center justify-center">
+                    <img src="./epicpools-icon.png" alt="EpicPools" class="h-8 w-auto" />
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <div
+                    class="h-10 w-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden">
+                    <img class="h-full w-full object-cover" data-alt="Client profile picture smiling"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVAGga4BCiFsRdOYomUu5fNHBuJh3c7MYhuk93Y0eEb0PrqijK5l3PifmfjKJL-Whify3N2q_uL6tQGSxcySa066C7ZgUIQwTR2dbj9mqgvliN-rtVGmW4QPEs5Al3cmZWLU2RpSWK-ywKLFGIjGJmEWIeODe-4FqbWI5FLRjg4jPoR3INQn2Ux15QQMQBfOY2sJREv2qHH0HgZpswS_u7ix4-eFIIBxuECddLmZJh_aWSahLkNDhw2fbMEiD2GnYbe3TU_KQNJ61S" />
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 py-8 lg:px-10">
+            <!-- Hero Section -->
+            <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="px-2 py-1 rounded bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">Project
+                            #4402</span>
+                        <span
+                            class="px-2 py-1 rounded bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider">In
+                            Progress</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Serene
+                        Backyard Oasis</h1>
+                    <p class="text-slate-500 dark:text-slate-400 mt-2 text-lg">Estimated Completion: Oct 24, 2023</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                    <div class="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">engineering</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest leading-none">Contractor
+                        </p>
+                        <p class="font-bold text-slate-900 dark:text-white">Elite Waterscapes Ltd.</p>
+                        <p class="text-sm text-primary">+1 (555) 012-3456</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Progress Overview -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Timeline Component -->
+                    <section
+                        class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">route</span> Project Timeline
+                        </h3>
+                        <div class="relative">
+                            <!-- Horizontal Line -->
+                            <div class="absolute top-5 left-0 w-full h-1 bg-slate-100 dark:bg-slate-700"></div>
+                            <div class="absolute top-5 left-0 h-1 bg-primary" style="width: 65%;"></div>
+                            <div class="relative flex justify-between">
+                                <!-- Step 1 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center z-10 border-4 border-white dark:border-slate-800">
+                                        <span class="material-symbols-outlined text-sm">check</span>
+                                    </div>
+                                    <p class="mt-3 font-bold text-sm text-slate-900 dark:text-white">Excavation</p>
+                                    <p class="text-xs text-slate-400">Sept 12</p>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center z-10 border-4 border-white dark:border-slate-800">
+                                        <span class="material-symbols-outlined text-sm">check</span>
+                                    </div>
+                                    <p class="mt-3 font-bold text-sm text-slate-900 dark:text-white">Plumbing</p>
+                                    <p class="text-xs text-slate-400">Sept 28</p>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center z-10 border-4 border-white dark:border-slate-800 animate-pulse">
+                                        <span class="material-symbols-outlined text-sm">trolley</span>
+                                    </div>
+                                    <p class="mt-3 font-bold text-sm text-primary">Tiling</p>
+                                    <p class="text-xs text-slate-400">Current Phase</p>
+                                </div>
+                                <!-- Step 4 -->
+                                <div class="flex flex-col items-center text-center opacity-40">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center z-10 border-4 border-white dark:border-slate-800">
+                                        <span class="material-symbols-outlined text-sm">home_repair_service</span>
+                                    </div>
+                                    <p class="mt-3 font-bold text-sm text-slate-900 dark:text-white">Completion</p>
+                                    <p class="text-xs text-slate-400">Est. Oct 24</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Gallery Section -->
+                    <section>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">photo_library</span> Project Photos
+                            </h3>
+                            <button class="text-primary font-semibold text-sm hover:underline">View All (24)</button>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="aspect-square rounded-xl overflow-hidden group relative">
+                                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Concrete pool shell during excavation"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC01yGGDjMN4_aIx0M-38UVJ5HH7h_IK3elx9aqkyeEJV9lcXnAqzEdZpF9dw3MoVQ7jfScfdMaRx886y4woXYUq1Y3yJQ4Q9_kiJ57iaWvN2kJ06k--tsh_vxSO4zZDtTyeJG9-DXA-V4mOEWhnxyvrqtVQcETquYKNX4KHrI5jPoLazZErGfSurNYPSXoj1wbU1hA3h5CP-RbhVZBNGO_w3vzqUGbNEY6ubAggDPVC3JE-SwHCyhNgCfsmerhmewvto-_IzJfgt2h" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                    <span class="text-white text-xs font-medium">Sept 15: Digging Day 1</span>
+                                </div>
+                            </div>
+                            <div class="aspect-square rounded-xl overflow-hidden group relative">
+                                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Pool plumbing pipes installation"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH4kJQUBUf7qCbuIWEICI8l10OhxvXe2hKAb1X8UR445Nyy15mnDRCoJnkrY7g1hw-MmRd9PHEmmNMMHq8TFpQN0R7hhbqxxTXOmGGph6nV9Qf_zg0YeqDjfitw_YIcMu6iICw0DwjZxl0MABUBJU78P_G5fydOYrbQ_4tuwZ4qa6lrNm0Ad0T4RJsARF_f3E_bB6hw0EmRl3bza5o65rorrMlsZzxZnm_HNsVAT2ope2NlIuXHRyqqZJm5QNt57DO7kldQoktgV6T" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                    <span class="text-white text-xs font-medium">Sept 22: Plumbing Check</span>
+                                </div>
+                            </div>
+                            <div class="aspect-square rounded-xl overflow-hidden group relative">
+                                <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Blue tiles being applied to pool wall"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnS_yQd0s7OFLRZ6BbxAHdKyTPLd7ajWDQKQHnBzn4S23pW2a8FzCMVVuvyd-8OrlOsSd2x8ScumUKUp5yy1SvCexbefGNjYXdBCHiqVqJpTDzHQpXRg0ydo30kXa4_8sadzs5KcYKhYqBDXygfl8AwL096JOK3pgo7dHi0h-oRV5ZBSdh9cERDeUZaQvs3t_llpbjqxHNAx7DE3Hj_ls6aDBw1DRw2Y787K5AraDNFXV7ptg0oH7MMM2I4C_UaWhtTbYDPJyElvkd" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                    <span class="text-white text-xs font-medium">Oct 05: Tile Work</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <!-- Documents Card -->
+                    <section
+                        class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">description</span> Documents
+                        </h3>
+                        <div class="space-y-3">
+                            <div
+                                class="flex items-center justify-between p-3 rounded-lg border border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-red-500">
+                                        <span class="material-symbols-outlined">picture_as_pdf</span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-sm font-semibold truncate">Signed_Contract_002.pdf</p>
+                                        <p class="text-xs text-slate-400">1.2 MB • Sep 05</p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400 text-sm">download</span>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-3 rounded-lg border border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-primary">
+                                        <span class="material-symbols-outlined">image</span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-sm font-semibold truncate">Approved_Blueprints.png</p>
+                                        <p class="text-xs text-slate-400">4.5 MB • Sep 08</p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400 text-sm">download</span>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-3 rounded-lg border border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <div class="text-green-600">
+                                        <span class="material-symbols-outlined">description</span>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-sm font-semibold truncate">Permit_Documentation.docx</p>
+                                        <p class="text-xs text-slate-400">84 KB • Sep 10</p>
+                                    </div>
+                                </div>
+                                <span class="material-symbols-outlined text-slate-400 text-sm">download</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-4 py-2 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg text-slate-400 text-sm font-medium hover:text-primary hover:border-primary transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm">upload</span> Upload Document
+                        </button>
+                    </section>
+                    <!-- Project Team -->
+                    <section class="bg-primary p-6 rounded-2xl shadow-lg text-white">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2 text-white">
+                            <span class="material-symbols-outlined">support_agent</span> Need Help?
+                        </h3>
+                        <p class="text-primary-foreground text-sm opacity-90 mb-6 leading-relaxed">Your project manager
+                            is available Mon-Fri, 8am-6pm for any questions regarding the schedule or design.</p>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="h-10 w-10 rounded-full border-2 border-white/20 overflow-hidden">
+                                <img class="h-full w-full object-cover" data-alt="Project Manager portrait"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVVNA5Ok4VFEgD3DBmAhMC0rRSO2ym4E59R7ZaWbIWvpBZ3Lc4gud3RCCj0oPHmqgenhK917eOAyaXUbRf90N-Ja2dM2ejxL5u1jU1TXxntsSkxqK-Syc1pU2qEVeUBQuUQ7w7m1hmFjfHfoX8ancaR6KlYEHRF6HZY_qKE-2hqahMSo87H5jK3-SDby-gmYUf71ZJ8jdbqvkj64zuGDwANQje2mlC4X9ld0NIcI1uhw-p4swSo3er98DePKzNamCIoUaQR8AmJVMa" />
+                            </div>
+                            <div>
+                                <p class="font-bold text-sm">Mark Thompson</p>
+                                <p class="text-xs opacity-70">Senior Project Manager</p>
+                            </div>
+                        </div>
+                        <a class="block w-full text-center bg-white text-primary font-bold py-3 rounded-xl shadow-md hover:bg-slate-50 transition-colors"
+                            href="mailto:pm@elitewaterscapes.com">
+                            Send Message
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- Project Location Mini Map (Simulated) -->
+        <footer class="bg-slate-900 text-slate-400 px-6 py-12 lg:px-20 mt-auto">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary text-white p-1.5 rounded flex items-center justify-center">
+                            <span class="material-symbols-outlined text-sm">pool</span>
+                        </div>
+                        <span class="text-white font-bold text-lg">PoolProject</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Built for transparency. Track every drop of progress in real-time
+                        from your backyard project dashboard.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Site Address</h4>
+                    <p class="text-sm">1245 Willow Oak Dr.<br />Austin, TX 78701</p>
+                    <div class="mt-4 h-24 w-full rounded-lg bg-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+                        </div>
+                        <div class="absolute inset-0 opacity-20"
+                            style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 10px 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Project Summary</h4>
+                    <ul class="text-sm space-y-2">
+                        <li class="flex justify-between"><span>Pool Type:</span> <span
+                                class="text-slate-300">Saltwater</span></li>
+                        <li class="flex justify-between"><span>Dimensions:</span> <span class="text-slate-300">15' x
+                                30'</span></li>
+                        <li class="flex justify-between"><span>Material:</span> <span
+                                class="text-slate-300">Gunite</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Quick Actions</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a class="hover:text-primary transition-colors" href="#">Change Requests</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Maintenance Guide</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Warranty Info</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto border-t border-slate-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© 2023 PoolProject Tracker. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white" href="#">Privacy Policy</a>
+                    <a class="hover:text-white" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
